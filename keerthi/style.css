@@ -1,0 +1,9 @@
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  let email = document.querySelector("input[name='email']").value;
+  let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email!");
+    e.preventDefault(); // stops form submission
+  }
+});
